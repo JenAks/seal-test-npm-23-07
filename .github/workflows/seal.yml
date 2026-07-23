@@ -1,0 +1,29 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  seal-fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SEAL_TOKEN: ${{ secrets.SEAL_TOKEN }}
+      SEAL_PROJECT: seal-test-npm-23-07
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Seal CLI
+        run: curl -s https://downloads.sealsecurity.io/cli/install.sh | bash
+      - name: Seal fix
+        run: seal fix . --mode local
