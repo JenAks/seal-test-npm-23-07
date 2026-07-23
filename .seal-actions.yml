@@ -1,0 +1,25 @@
+meta:
+  schema-version: 0.1.0
+  created-on: "2026-07-23T13:46:01Z"
+  cli-version: 0.2.0
+projects:
+  seal-test-npm-23-07:
+    targets:
+      - package.json
+    manager:
+      ecosystem: node
+      name: npm
+      version: "9"
+    overrides:
+      glob-parent:
+        5.1.1:
+          use: 5.1.1-sp1
+      follow-redirects:
+        1.15.6:
+          use: 1.15.6-sp1
+      axios:
+        1.11.0:
+          use: 1.11.0-sp1
+      js-yaml:
+        3.14.1:
+          use: 3.14.1-sp1
