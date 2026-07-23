@@ -1,6 +1,5 @@
 QA test project — NPM / CLI local (23.07.2026)
 
-
 Project type: CLI
 Fix mode: local
 Ecosystem: NPM
