@@ -1,0 +1,10 @@
+{
+  "name": "seal-test-npm-23-07",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "1.11.0",
+    "follow-redirects": "1.15.6",
+    "js-yaml": "3.14.1",
+    "glob-parent": "5.1.1"
+  }
+}
