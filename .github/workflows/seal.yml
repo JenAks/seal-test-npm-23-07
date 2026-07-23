@@ -24,6 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Install Seal CLI
-        run: curl -s https://downloads.sealsecurity.io/cli/install.sh | bash
+        run: |
+          curl -s https://downloads.sealsecurity.io/cli/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Seal fix
         run: seal fix . --mode local
