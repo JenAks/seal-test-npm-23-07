@@ -27,3 +27,4 @@ jobs:
           mode: fix
           fix_mode: local
           project: seal-test-npm-23-07
+          target: .
